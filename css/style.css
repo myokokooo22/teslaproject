@@ -1,0 +1,591 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Exo 2', sans-serif;
+}
+
+/* Start Header section  */
+header{
+    height: 100vh;
+    background-image: url("../assets/img/tesla1.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    overflow: hidden;
+
+}
+/* End Header section  */
+
+/* Start Navbar section  */
+.navbar{
+    background: rgba(0,0,0,0.3);
+    padding: 10px 30px;
+    transition: 0.5s ease-in-out;
+}
+
+.navmenus{
+    padding: 5px 10px;
+    background:rgba(0,0,0,0.8);
+}
+
+.lines1,.lines2,.lines3{
+    width: 23px;
+    height: 3px;
+    margin: 5px;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+.changes .lines1{
+    transform: translate(-5px,7px) rotate(-45deg);
+}
+
+.changes .lines2{
+    opacity: 0;
+}
+
+.changes .lines3{
+    transform: translate(-4px,-8px) rotate(45deg);
+}
+
+ul li .menuitems{
+    color: white;
+    transition: all 0.3s;
+}
+
+ul li .menuitems:hover{
+    color:  cyan;
+    border-bottom: 2px solid cyan;
+}
+/* End Navbar section */
+
+/* Start Banner section  */
+.banners{
+    width: 100%;
+    position: absolute;
+
+    top: 30%;
+    left: 10%;
+}
+
+.bannerheaders{ 
+    animation: myani1 4s linear;
+}
+
+.banners1{
+    height: 100vh;
+    background-image: url("../assets/img/modelsinterior2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+    position: relative;
+
+    z-index: -1;
+}
+
+.bnns{
+    background:rgba(255,255,255,0.5);
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+
+    top: 30%;
+    right: 15%;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.bnns.ones{
+    top: 10%; 
+}
+
+.bnns.active{
+    background-color: green; 
+}
+
+.bnns.twos{
+    top: 30%;
+}
+
+.subscribes{
+    animation: myani2 4s linear;
+}
+
+@keyframes myani1 {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes myani2 {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media(max-width: 1000px){
+    header{
+        height: 50vh;
+    }
+}
+
+/* End Banner Section  */
+
+/* Start Service Section  */
+.underlines{
+    width: 100px;
+    border: 2px double yellow;
+    margin: auto;
+}
+/* End Service Section  */
+
+/* Start About Section  */
+.aboutimgs1{
+    animation: rtlani 3s;
+}
+
+.aboutimgs2{
+    animation: ltrani 3s;
+}
+
+.abouttxts1{
+    animation: btt 3s;
+}
+
+
+@keyframes rtlani {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes ltrani {
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes btt {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }   
+
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+/* End About Section  */
+
+/* Start Footer section */
+footer{
+    background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.5)), url("../assets/img/modely4.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li a{
+    text-decoration: none;
+    color: white;  
+}
+
+footer ul li a:hover{
+    color: tomato;  
+}
+
+.icon-group1 .icons{
+    font-size: 18px;
+    padding: 8px 9px;
+    margin: 6px;
+    color: white;
+    border-radius: 50%;
+}
+
+.icon-group1 .icons:nth-of-type(1){  
+    background-color: red;
+}
+.icon-group1 .icons:nth-of-type(2){
+    padding: 8px 10px;
+    background-color: greenyellow;
+}
+.icon-group1 .icons:nth-of-type(3){
+    background-color: violet;
+}
+
+.icon-group2 .icons{
+    padding: 10px;
+    margin: 5px;
+    color:white;
+    text-align: center;
+    /* border: 1px solid white; */
+    border-radius: 50%;
+}
+
+.icon-group2 .icons:nth-of-type(1){
+    padding: 10px 11px;
+    background-color: skyblue;
+}
+
+.icon-group2 .icons:nth-of-type(2){
+    padding: 10px 14px;
+    background-color: blue;
+}
+
+.icon-group2 .icons:nth-of-type(3){
+    padding: 10px 12px;
+    background-color: steelblue;
+}
+
+.icon-group2 .icons:nth-of-type(4){
+    padding: 10px 13px;
+    background:linear-gradient(#5851DB,#833AB4,#C13584,#E1306C, #FD1D1D,#F56040);
+}
+
+.icon-group2 .icons:nth-of-type(5){
+    background-color: red;
+}
+
+footer .btns{
+    border: 1px solid #E1306C;
+    color: white;
+
+    position: relative;
+    overflow: hidden;
+}
+
+footer .btns::after{
+    content: 'Submit';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(50deg,#E1306C, #FD1D1D,#F56040);
+    color:white;
+
+    position: absolute;
+    top:0;
+    left: 0;
+
+    transform: translateX(-100%);
+    transition: all 0.5s;
+
+}
+
+footer .btns:hover::after{
+    transform: translateX(0%);
+    color:white;
+}
+
+.btns:hover{
+    color:white;
+}
+
+footer .inputs{
+    background-color: transparent;
+    border:0;
+    border-bottom: 2px solid white;
+    font-size: 1rem;
+    color:white;
+}
+
+footer .inputs:focus{
+    background-color: transparent;
+    outline: 0;
+    border-bottom: 2px solid red;
+    box-shadow: none;
+    color:white;
+}
+
+footer .inputs::placeholder{
+    color: white;
+}
+
+footer .selects{
+    background:rgba(255,255,255,0.4);
+}
+
+footer .dates{
+    background-color: transparent;
+   color: #fff;
+   border:0;
+   border-bottom: 2px solid white;
+}
+
+footer .date:focus{
+    background-color: transparent;
+    outline: 0;
+    border-bottom: 2px solid red;
+    box-shadow: none;
+}
+
+/* End footer Section  */
+
+/* Start Modal Box  modelS*/
+.modal .digits-group .digits{
+    font-size: 2rem;
+}
+
+.modal .digits-group{
+    padding: 5px;
+}
+
+.modalbuttons{
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 20px;
+    border: 1px solid #999;
+    text-align: center;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.modalbuttons.active{
+    border: 1px solid green;
+    color: green;
+}
+
+.modal-body .slider{
+    width: 400px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    overflow: hidden;
+
+    position: relative;
+}
+
+.slider .slide-carosel{
+    display: flex;
+    transform: translate(0);
+    transition: all 0.5s;
+}
+
+.btn-group{
+    color: #999;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    cursor: pointer;
+}
+
+.btn-group .rights{
+    position: absolute;
+    top:0;
+    right: -380px; 
+}
+
+.imggroups{
+    width: 500px;
+    height: 300px;
+    overflow-y:scroll;
+    overflow-x: hidden;
+}
+
+@media (max-width: 1000px) {
+    .modal-body .slider{
+        width: 200px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        overflow: hidden;
+    
+        position: relative;
+    }
+
+    .btn-group .rights{
+        position: absolute;
+        top:0;
+        right: -180px; 
+    }
+    
+}
+/* End Modal Box modelS  */
+
+/* Start Modal Box  modelX*/
+
+.modalbuttonx{
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 20px;
+    border: 1px solid #999;
+    text-align: center;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.modalbuttonx.active{
+    border: 1px solid green;
+    color: green;
+}
+
+
+.modal-body .sliderx{
+    width: 400px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    overflow: hidden;
+
+    position: relative;
+}
+
+.sliderx .slide-caroselx{
+    display: flex;
+    transform: translate(0);
+    transition: all 0.5s;
+}
+
+@media (max-width: 1000px) {
+    .modal-body .sliderx{
+        width: 200px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        overflow: hidden;
+    
+        position: relative;
+    }
+}
+
+/* End Modal Box modelX  */
+
+/* Start Modal Box  model3*/
+
+.modalbutton3{
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 20px;
+    border: 1px solid #999;
+    text-align: center;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.modalbutton3.active{
+    border: 1px solid green;
+    color: green;
+}
+
+
+.modal-body .slider3{
+    width: 400px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    overflow: hidden;
+
+    position: relative;
+}
+
+.slider3 .slide-carosel3{
+    display: flex;
+    transform: translate(0);
+    transition: all 0.5s;
+}
+
+@media (max-width: 1000px) {
+    .modal-body .slider3{
+        width: 200px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        overflow: hidden;
+    
+        position: relative;
+    }
+}
+
+/* End Modal Box Model3  */
+
+/* Start Modal Box for Model Y */
+.modalbuttony{
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 20px;
+    border: 1px solid #999;
+    text-align: center;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.modalbuttony.active{
+    border: 1px solid green;
+    color: green;
+}
+
+
+.modal-body .slidery{
+    width: 400px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    overflow: hidden;
+
+    position: relative;
+}
+
+.slidery .slide-carosely{
+    display: flex;
+    transform: translate(0);
+    transition: all 0.5s;
+}
+
+@media (max-width: 1000px) {
+    .modal-body .slidery{
+        width: 200px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        overflow: hidden;
+    
+        position: relative;
+    }
+}
+
+/* End Modal Box for Model Y */
+
+/* Start Modal Box for Wheel  */
+.accbtn{
+   padding: 3px 8px;
+   border: 0;
+   background-color: orange;
+   color: white;
+}
+/* 
+.accbtn.btnplus{
+    background-color: chartreuse;
+} */
+
+.qty{
+    padding: 5px;
+    color: orangered;
+}
+/* End Modal Box for Wheel  */
+
+
